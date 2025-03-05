@@ -54,6 +54,8 @@ dependencies {
 
     implementation("org.postgresql:postgresql:42.7.3")
 
+    implementation("com.ritense.valtimo:plugin:$valtimoVersion")
+
     if (System.getProperty("os.arch") == "aarch64") {
         runtimeOnly("io.netty:netty-resolver-dns-native-macos:4.1.105.Final:osx-aarch_64")
     }

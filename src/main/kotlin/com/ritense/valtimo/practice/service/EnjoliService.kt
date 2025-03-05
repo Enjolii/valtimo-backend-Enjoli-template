@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service
 
 @ProcessBean
 @Service
-class Hello {
+class EnjoliService {
     fun hello(input: String) {
         println(input)
     }
 
-    fun error(input: String) {
-        println(input)
+    fun som(input1: Int, input2: Int) {
+        println(input1 + input2)
     }
 }

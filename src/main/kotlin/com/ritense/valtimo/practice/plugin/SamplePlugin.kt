@@ -2,7 +2,6 @@ package com.ritense.valtimo.practice.plugin
 
 import com.ritense.plugin.annotation.Plugin
 import com.ritense.plugin.annotation.PluginAction
-import com.ritense.plugin.annotation.PluginActionProperty
 import com.ritense.plugin.annotation.PluginProperty
 import com.ritense.processlink.domain.ActivityTypeWithEventName
 import org.camunda.bpm.engine.delegate.DelegateExecution
@@ -19,12 +18,6 @@ class SamplePlugin(
     @PluginProperty(key = "url", secret = false)
     lateinit var url: URI
 
-    @PluginProperty(key = "username", secret = false)
-    lateinit var username: String
-
-    @PluginProperty(key = "password", secret = true)
-    lateinit var password: String
-
     @PluginAction(
         key = "sample-action",
         title = "Sample action",
@@ -33,7 +26,6 @@ class SamplePlugin(
     )
     fun samplePrinter(
         execution: DelegateExecution,
-        @PluginActionProperty sampleString: String,
     ) {
         sampleClient.hello()
     }
